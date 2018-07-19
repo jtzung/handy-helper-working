@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+    <body>
+        <h2>Edit Your Job Posting</h2>
+        <form action='/update/{{trip.id}}' method='POST'>
+        {% csrf_token %}
+        <input type='hidden' name='user_id' value='{{user.id}}'>
+        <p>Title: <input type='text' name='title' value='{{trip.destination}}'></p>
+        <p>Description: <input type='text' name='desc' value='{{trip.desc}}'></p>
+        <p>Location: <input type='text' name='location' value='{{trip.destination}}'></p>
+        <input type='submit' value='Submit'>
+    </form>
+        <a href='/home'>Go Back</a> | <a href='/logout'>Logout</a>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+    <body>
+        {% for trip in trips %}
+        <div>
+        <h1>{{trip.destination}}</h1>
+    
+            <p>{{trip.desc}}</p>
+            <p>Posted by: {{trip.uploader.first_name}} {{trip.uploader.last_name}}</p>
+            <p>Posted On: {{trip.travel_from}}</p>
+        {% endfor %}
+        </div>
+    
+        <a href='home'>Go Back</a> | <a href='/logout'>Logout</a>
+
+    </body>
+</html>
